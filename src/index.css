@@ -1,5 +1,31 @@
+@import "/fonts/fonts.css";
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: "Circular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #383838;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: normal;
+  color: #383838;
+}
+
+a {
+  text-decoration: none;
+  color: #383838;
 }
