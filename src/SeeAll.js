@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import React from "react";
+import { Link } from "react-router-dom";
+
 import arrow from "./arrow_right.svg";
 
 const Text = styled.span`
@@ -16,18 +18,16 @@ const Text = styled.span`
 
 const Arrow = styled.img`margin-left: 8px;`;
 
-const Link = styled.a`
+const SeeAll = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
   white-space: nowrap;
 `;
 
-export default function() {
-  return (
-    <Link href="#">
-      <Text>See all</Text>
-      <Arrow src={arrow} alt="Arrow" />
-    </Link>
-  );
-}
+export default props => (
+  <SeeAll to={props.to}>
+    <Text>See all</Text>
+    <Arrow src={arrow} alt="Arrow" />
+  </SeeAll>
+);

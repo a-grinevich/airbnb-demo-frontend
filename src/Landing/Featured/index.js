@@ -1,5 +1,5 @@
 import React from "react";
-import { Next, SectionTitle, Row, Image, Card, Title } from "../styled";
+import { Next, SectionTitle, Row, Image, Card, Title } from "../../styled";
 import img01 from "./img01.png";
 import img02 from "./img02.png";
 import img03 from "./img03.png";
@@ -17,7 +17,9 @@ const NextLink = Next.extend`
   }
 `;
 
-const City = Title.extend`font-weight: 700;`;
+const City = Title.extend`
+  font-weight: 700;
+`;
 
 export default function() {
   return (
@@ -26,42 +28,42 @@ export default function() {
         <SectionTitle>Featured destinations</SectionTitle>
         <Row>
           <div className="col-xs-4 col-md-3 col-lg-2">
-            <Card href="#">
+            <Card to="/">
               <Image src={img01} />
               <City>Paris</City>
             </Card>
           </div>
           <div className="col-xs-4 col-md-3 col-lg-2">
-            <Card href="#">
+            <Card to="/">
               <Image src={img02} />
               <City>Miami</City>
             </Card>
           </div>
           <div className="col-xs-4 col-md-3 col-lg-2">
-            <Card href="#">
+            <Card to="/">
               <Image src={img03} />
               <City>Tokyo</City>
             </Card>
           </div>
           <div className="col-xs-4 col-md-3 col-lg-2">
-            <Card href="#">
+            <Card to="/">
               <Image src={img04} />
               <City>Cape town</City>
             </Card>
           </div>
           <div className="col-xs-4 col-md-3 col-lg-2">
-            <Card href="#">
+            <Card to="/">
               <Image src={img05} />
               <City>Seoul</City>
             </Card>
           </div>
           <div className="col-xs-4 col-md-3 col-lg-2">
-            <Card href="#">
+            <Card to="/">
               <Image src={img06} />
               <City>Los Angeles</City>
             </Card>
           </div>
-          <NextLink href="#" />
+          <NextLink to="/" />
         </Row>
       </div>
     </section>

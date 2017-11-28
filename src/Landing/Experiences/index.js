@@ -10,10 +10,10 @@ import {
   Card,
   Price,
   Title
-} from "../styled";
-import SeeAll from "../SeeAll";
+} from "../../styled";
+import SeeAll from "../../SeeAll";
 
-import star from "../star.svg";
+import star from "../../star.svg";
 import img1 from "./img01.png";
 import img2 from "./img02.png";
 import img3 from "./img03.png";
@@ -25,11 +25,11 @@ export default function() {
       <div className="container">
         <SectionTitle>
           <span>Experiences</span>
-          <SeeAll />
+          <SeeAll to="/" />
         </SectionTitle>
         <Row>
           <div className="col-xs-6 col-md-4 col-lg-3">
-            <Card href="#">
+            <Card to="/">
               <Image src={img4} />
               <Title>
                 <Price>$29</Price>&nbsp;Forest theraphy
@@ -45,7 +45,7 @@ export default function() {
             </Card>
           </div>
           <div className="col-xs-6 col-md-4 col-lg-3">
-            <Card href="#">
+            <Card to="/">
               <Image src={img3} />
               <Title>
                 <Price>$69</Price>&nbsp;Whale watching
@@ -61,7 +61,7 @@ export default function() {
             </Card>
           </div>
           <div className="col-xs-6 col-md-4 col-lg-3">
-            <Card href="#">
+            <Card to="/">
               <Image src={img2} />
               <Title>
                 <Price>$69</Price>&nbsp;Table Mountain Summit, Cable Car Down
@@ -77,7 +77,7 @@ export default function() {
             </Card>
           </div>
           <div className="col-xs-6 col-md-4 col-lg-3">
-            <Card href="#">
+            <Card to="/">
               <Image src={img1} />
               <Title>
                 <Price>$50</Price>&nbsp;Salsa Night
@@ -92,7 +92,7 @@ export default function() {
               </Rating>
             </Card>
           </div>
-          <Next href="#" />
+          <Next to="/" />
         </Row>
       </div>
     </section>

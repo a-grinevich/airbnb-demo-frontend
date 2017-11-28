@@ -9,31 +9,29 @@ import {
   Arrow,
   Input,
   Nav,
-  Link
+  NavLink
 } from "./styled";
 
-export default () => {
-  return (
-    <Header>
-      <div className="container">
-        <Row>
-          <div className="col-xs-2 col-md-1">
-            <Logo href="#">
-              <LogoImage src={logo} />
-              <Arrow src={arrow} />
-            </Logo>
-          </div>
-          <div className="col-xs-10 col-md-7 col-lg-5">
-            <Input placeholder="Try “Miami”" />
-          </div>
-          <Nav>
-            <Link href="#">Become a host</Link>
-            <Link href="#">Help</Link>
-            <Link href="#">Sign Up</Link>
-            <Link href="#">Log In</Link>
-          </Nav>
-        </Row>
-      </div>
-    </Header>
-  );
-};
+export default props => (
+  <Header className={props.className}>
+    <div className="container">
+      <Row>
+        <div className="col-xs-2 col-md-1">
+          <Logo to="/">
+            <LogoImage src={logo} />
+            <Arrow src={arrow} />
+          </Logo>
+        </div>
+        <div className="col-xs-10 col-md-7 col-lg-5">
+          <Input placeholder={props.placeholder} />
+        </div>
+        <Nav>
+          <NavLink to="/">Become a host</NavLink>
+          <NavLink to="/">Help</NavLink>
+          <NavLink to="/">Sign Up</NavLink>
+          <NavLink to="/">Log In</NavLink>
+        </Nav>
+      </Row>
+    </div>
+  </Header>
+);

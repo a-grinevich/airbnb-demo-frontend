@@ -1,5 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import chevron from "./chevron.svg";
+
+export const Main = styled.main`padding-top: 80px;`;
 
 export const Next = styled.a`
   display: none;
@@ -70,7 +73,7 @@ export const Image = styled.img`
   margin-bottom: 8px;
 `;
 
-export const Card = styled.a`
+export const Card = styled(Link)`
   display: block;
   text-decoration: none;
 `;
