@@ -21,7 +21,7 @@ export const Row = styled.div`
   margin-left: -8px;
 
   @media (min-width: 992px) {
-    padding-right: 33.33333333%;
+    padding-right: calc(33.33333333% + 6px);
   }
 `;
 

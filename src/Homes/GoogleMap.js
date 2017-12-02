@@ -8,10 +8,10 @@ const MapContainer = styled.div`
   @media screen and (min-width: 992px) {
     display: block;
     position: fixed;
-    top: 138px;
+    top: 136px;
     right: 0;
     bottom: 0;
-    left: calc(50% + 176px);
+    left: calc(50% + 170px);
     z-index: -1;
   }
 
@@ -21,7 +21,7 @@ const MapContainer = styled.div`
     top: 136px;
     right: 0;
     bottom: 0;
-    left: calc(50% + 211px);
+    left: calc(50% + 205px);
     z-index: -1;
   }
 `;

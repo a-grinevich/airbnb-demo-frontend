@@ -3,7 +3,9 @@ import Cards from "./Cards";
 import Filters from "./Filters";
 import { Main } from "../styled";
 
-const Content = Main.extend`padding-top: 136px;`;
+const Content = Main.extend`
+  padding-top: 138px;
+`;
 
 export default function() {
   return (

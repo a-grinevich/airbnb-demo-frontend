@@ -12,6 +12,16 @@ export const Filters = styled.div`
   z-index: 20;
 `;
 
+export const Overlay = styled.div`
+  position: fixed;
+  top: 138px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  opacity: 0.8;
+`;
+
 export const Row = styled.div`
   display: flex;
   flex: 0 1 auto;
@@ -59,7 +69,9 @@ export const Dropdown = styled.div`
   }
 `;
 
-export const FilterContainer = styled.div`position: relative;`;
+export const FilterContainer = styled.div`
+  position: relative;
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -96,7 +108,9 @@ export const Cancel = styled.button`
   cursor: pointer;
   color: #636363;
 `;
-export const Apply = Cancel.extend`color: #0f7276;`;
+export const Apply = Cancel.extend`
+  color: #0f7276;
+`;
 
 export const Footer = styled.footer`
   display: flex;
@@ -131,22 +145,18 @@ export const Arrow = styled.img`
   margin: 0 16px;
 `;
 
-export const Option = styled.div`
-  display: table;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 23px;
+export const Container = styled.div`
+  padding: 10px 16px 0 24px;
+  min-width: 326px;
 `;
 
-export const OptionCell = styled.div`
-  display: table-cell;
-  width: 100%;
-  box-sizing: border-box;
-  vertical-align: middle;
+export const Name = styled.div`
+  font-size: 14px;
+  color: #383838;
 `;
 
 export const OptionName = styled.div`
-  line-height: 21px;
+  line-height: 24px;
   font-size: 18px;
   color: #383838;
 
@@ -157,24 +167,14 @@ export const OptionName = styled.div`
 `;
 
 export const OptionTitle = styled.div`
-  line-height: 16px;
+  line-height: 18px;
   font-size: 14px;
   color: #383838;
-  margin-top: 6px;
+  margin-top: 4px;
   font-weight: 300;
 
   @media screen and (min-width: 768px) {
-    line-height: 19px;
+    line-height: 30px;
     font-size: 16px;
   }
-`;
-
-export const Container = styled.div`
-  padding: 10px 16px 0 24px;
-  min-width: 326px;
-`;
-
-export const Name = styled.div`
-  font-size: 14px;
-  color: #383838;
 `;
