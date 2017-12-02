@@ -15,27 +15,27 @@ import {
 import MediaQuery from "react-responsive";
 
 export default class Filter extends React.Component {
-  state = {
-    isOpen: false
-  };
-
   toggleOpen = () => {
-    this.setState({ isOpen: !this.state.isOpen });
+    if (!this.props.isOpen) {
+      this.props.handleOpen(this.props.id);
+    } else {
+      this.props.handleClose();
+    }
   };
 
   onClose = () => {
-    this.setState({ isOpen: false });
+    this.props.handleClose();
   };
 
   render() {
     return (
       <FilterContainer className={this.props.className}>
-        <Button onClick={this.toggleOpen} isOpen={this.state.isOpen}>
-          {this.state.isOpen && this.props.activeName
+        <Button onClick={this.toggleOpen} isOpen={this.props.isOpen}>
+          {this.props.isOpen && this.props.activeName
             ? this.props.activeName
             : this.props.name}
         </Button>
-        {this.state.isOpen && (
+        {this.props.isOpen && (
           <Dropdown>
             <MediaQuery maxWidth={767}>
               <Header>
